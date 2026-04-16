@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Proposal 💖</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, pink, lightblue);
+      text-align: center;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+      width: 90%;
+      max-width: 450px;
+    }
+
+    h1 {
+      color: #ff1493;
+      font-size: 28px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #yesBtn {
+      background-color: #00c853;
+      color: white;
+    }
+
+    #yesBtn:hover {
+      background-color: #009624;
+      transform: scale(1.1);
+    }
+
+    #noBtn {
+      background-color: #d50000;
+      color: white;
+    }
+
+    #noBtn:hover {
+      background-color: #9b0000;
+      transform: scale(1.1);
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    #emoji {
+      font-size: 90px;
+      margin-top: 15px;
+    }
+
+    img{
+      margin-top: 20px;
+      width: 100%;
+      max-width: 300px;
+      border-radius: 15px;
+      display: none; /* hidden initially */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Will You Be Mine? 💕</h1>
+    <p style="font-size:18px;">Please say YES 🥺💖</p>
+
+    <button id="yesBtn" onclick="yesClicked()">YES ❤️</button>
+    <button id="noBtn" onclick="noClicked()">NO 💔</button>
+
+    <div id="emoji"></div>
+    <div id="result"></div>
+
+    <!-- Video -->
+    <img id="huggy" src="https://drive.google.com/file/d/1CBrXD1UyS9_-f8Ii4f2naP-aR0u_3T8C/view?usp=sharing" alt="huggy">
+  </div>
+
+  <script>
+    function yesClicked() {
+      document.getElementById("emoji").innerHTML = "😁😍💖";
+      document.getElementById("result").innerHTML = "I LOVE YOU ❤️❤️❤️";
+
+      document.body.style.background = "linear-gradient(to right, #ff69b4, #ffb6c1)";
+
+      document.getElementById("huggy").style.display="block";
+    }
+
+    function noClicked() {
+      document.getElementById("emoji").innerHTML = "😈🔥";
+      document.getElementById("result").innerHTML = "Oh nooo 😭 You broke my heart 💔";
+
+      document.body.style.background = "linear-gradient(to right, black, red)";
+      document.getElementById("result").style.color = "white";
+
+      // Hide Video
+      document.getElementById("huggy").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
